@@ -55,6 +55,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
         public TextView  textViewName;
         public ImageView imageView;
+        public TextView  textViewPrediction;
 
 
         public ImageViewHolder(@NonNull View itemView) {
@@ -62,6 +63,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
             textViewName = itemView.findViewById(R.id.text_view_name);
             imageView = itemView.findViewById(R.id.image_view_upload);
+            textViewPrediction = itemView.findViewById(R.id.text_view_prediction);
 
         }
     }

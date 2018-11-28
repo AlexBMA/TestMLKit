@@ -135,7 +135,10 @@ public class MainActivity extends AppCompatActivity {
                             }, 500);
 
                             Toast.makeText(MainActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
-                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),taskSnapshot.getStorage().getDownloadUrl().toString());
+
+                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
+                                    taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
+
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child((uploadId)).setValue(upload);
 
