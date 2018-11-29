@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PhotoViewActivity">
+    tools:context=".PhotoViewActivity"
+    android:orientation="vertical">
 
 
     <ImageView
-        android:layout_width="300dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/image_view_photo"
+        android:id="@+id/image_view_prediction"
+        android:src="@drawable/test_mg17"
+
         />
 
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:id="@+id/text_view_prediction_2"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prediction"/>
+
+
+
+</LinearLayout>

@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageView;
     private ProgressBar mProgressBar;
 
+    private Button mMLKIT;
+
     private Uri mImageUri;
 
     @Override
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTextFileName = findViewById(R.id.edit_text_file_name);
         mProgressBar = findViewById(R.id.progress_bar);
         mImageView = findViewById(R.id.image_view);
+
 
 
         mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
@@ -104,6 +107,19 @@ public class MainActivity extends AppCompatActivity {
                 openImagesActivity();
             }
         });
+
+        mMLKIT = findViewById(R.id.button_go_ml_activity);
+        mMLKIT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMLKITActivity();
+            }
+        });
+    }
+
+    private void openMLKITActivity(){
+        Intent intent = new Intent(this, PhotoViewActivity.class);
+        startActivity(intent);
     }
 
     private void openImagesActivity(){
