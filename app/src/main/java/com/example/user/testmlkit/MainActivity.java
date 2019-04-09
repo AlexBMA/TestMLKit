@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageView;
     private ProgressBar mProgressBar;
 
-    private Button mMLKIT;
+    private Button mMlKit;
 
     private Uri mImageUri;
 
@@ -108,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mMLKIT = findViewById(R.id.button_go_ml_activity);
-        mMLKIT.setOnClickListener(new View.OnClickListener() {
+        mMlKit = findViewById(R.id.button_go_ml_activity);
+        mMlKit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openMLKITActivity();
